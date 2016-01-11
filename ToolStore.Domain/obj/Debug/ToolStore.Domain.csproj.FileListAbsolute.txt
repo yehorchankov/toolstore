@@ -1,0 +1,5 @@
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.Domain\bin\Debug\ToolStore.Domain.dll
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.Domain\bin\Debug\ToolStore.Domain.pdb
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.Domain\obj\Debug\ToolStore.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.Domain\obj\Debug\ToolStore.Domain.dll
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.Domain\obj\Debug\ToolStore.Domain.pdb

@@ -1,0 +1,24 @@
+﻿@model ToolStore.Domain.Entities.Product
+
+<div class="center-block">
+    <h2 style="font-size: 40px">@Model.Name</h2>
+    <div class="col-md-6">
+        <img src="/@Model.PicturePath" alt="@Model.Name" width="400" height="400" />
+    </div>
+    <div class="col-md-6">
+        <div class="bg-warning" style="padding: 20px; text-align: center;">
+            <span class="text-muted" style="font-size: 19px">@Model.Price.ToString("c")</span>
+            @using (Html.BeginForm("Buy", "Shipment"))
+            {
+                @Html.HiddenFor(p => p.Id)
+                <input type="submit" class="btn btn-block btn-success center-block" style="font-size: 25px" value="Buy it!" />
+            }
+        </div>
+        <br />
+        <div style="font-size: 17px" class="well">
+            About the product: @Model.Description
+        </div>
+        <br/>
+        @Html.ActionLink("Back to store", "Index", null, new { @class = "btn btn-info btn-lg btn-block center-block", style = "font-size: 15px; width: 300px" })
+    </div>
+</div>
