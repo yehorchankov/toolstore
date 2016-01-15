@@ -1,26 +1,23 @@
-﻿@model ToolStore.Domain.Entities.Product
+﻿@model ToolStore.DAL.Entities.Product
 
 <div class="col-xs-6 col-md-4 well well-sm">
-    <img src="@Model.PicturePath" class="img-thumbnail center-block" width="200" height="200" />
+    <img src="@Model.PicturePath" class="img-thumbnail center-block" width="200" height="200"/>
     <h4>
-        
+
         <strong>@Model.Name</strong>
         <strong class="pull-right label label-info">@Model.Price.ToString("C")</strong>
     </h4>
-    @using (Html.BeginForm("Buy", "Shipment"))
-    {
-        <div class="pull-right">
-            @Html.HiddenFor(p => p.Id)
-            <input type="submit" class="btn btn-success btn-lg" value="Buy it" />
-        </div>
-    }
     
+    <div class="pull-right">
+        @Html.ActionLink("Buy it!", "Buy", "Shipment", new { Model.Id }, new { @class = "btn btn-success btn-lg" })
+    </div>
+
     @using (Html.BeginForm("Details", "Product"))
     {
         <div>
             @Html.HiddenFor(p => p.Id)
             @Model.Description.Substring(0, 20)..
-            <input type="submit" class="btn btn-link" value="Learn more" />
+            <input type="submit" class="btn btn-link" value="Learn more"/>
         </div>
     }
 </div>

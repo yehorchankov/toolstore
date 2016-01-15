@@ -2,7 +2,6 @@ C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ToolStore.UI.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ToolStore.UI.pdb
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\Ninject.dll
-C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Helpers.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Mvc.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Razor.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Webpages.Deployment.dll
@@ -13,13 +12,11 @@ C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Webpages.xml
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Webpages.Deployment.xml
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Webpages.Razor.xml
-C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Helpers.xml
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\System.Web.Mvc.xml
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ru\System.Web.Razor.resources.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ru\System.Web.Webpages.resources.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ru\System.Web.Webpages.Deployment.resources.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ru\System.Web.Webpages.Razor.resources.dll
-C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ru\System.Web.Helpers.resources.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ru\System.Web.Mvc.resources.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\obj\Debug\ToolStore.UI.csprojResolveAssemblyReference.cache
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\obj\Debug\ToolStore.UI.dll
@@ -27,7 +24,7 @@ C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ToolStore.Domain.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ToolStore.Domain.pdb
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\Ninject.Web.Common.dll
-C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\Ninject.Web.Mvc.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\WebActivatorEx.dll
 C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\Ninject.Web.Common.xml
-C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\Ninject.Web.Mvc.xml
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ToolStore.DAL.dll
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.UI\bin\ToolStore.DAL.pdb

@@ -33,11 +33,6 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IOrderHandler.cs" />
@@ -45,11 +40,15 @@
     <Compile Include="Concrete\EmailCredential.cs" />
     <Compile Include="Concrete\OrderHandler.cs" />
     <Compile Include="Concrete\ProductRepository.cs" />
-    <Compile Include="Entities\Product.cs" />
-    <Compile Include="Entities\ShippingCredentials.cs" />
+    <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ToolStore.DAL\ToolStore.DAL.csproj">
+      <Project>{8e92ea81-72a5-4d5f-9bf6-75c2c1a1c4f3}</Project>
+      <Name>ToolStore.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

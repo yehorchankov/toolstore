@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStore.UI", "ToolStore.U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStore.Domain", "ToolStore.Domain\ToolStore.Domain.csproj", "{A957DF30-89EA-4641-BBBD-988D382E9A6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolStore.DAL", "ToolStore.DAL\ToolStore.DAL.csproj", "{8E92EA81-72A5-4D5F-9BF6-75C2C1A1C4F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A957DF30-89EA-4641-BBBD-988D382E9A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A957DF30-89EA-4641-BBBD-988D382E9A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A957DF30-89EA-4641-BBBD-988D382E9A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E92EA81-72A5-4D5F-9BF6-75C2C1A1C4F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E92EA81-72A5-4D5F-9BF6-75C2C1A1C4F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E92EA81-72A5-4D5F-9BF6-75C2C1A1C4F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E92EA81-72A5-4D5F-9BF6-75C2C1A1C4F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

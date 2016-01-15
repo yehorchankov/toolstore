@@ -1,6 +1,15 @@
 ﻿@model ToolStore.Domain.Abstract.IProductRepository
 
-<div>
+<style type="text/css">
+    .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display:         flex;
+    }
+</style>
+
+<div class="row">
     @foreach (var p in Model.Products)
     {
         @Html.Partial("ProductWidget", p)

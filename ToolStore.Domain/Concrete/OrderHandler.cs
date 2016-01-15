@@ -1,33 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿#region
+
+using System;
 using System.Net;
+using System.Net.Mail;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using ToolStore.DAL.Entities;
 using ToolStore.Domain.Abstract;
 using ToolStore.Domain.Entities;
-using System.Net.Mail;
+
+#endregion
 
 namespace ToolStore.Domain.Concrete
 {
+    /// <summary>
+    /// Provides logic to handle customer's order
+    /// </summary>
     public class OrderHandler : IOrderHandler
     {
-        private EmailCredential _credential;
+        private readonly EmailCredential _credential;
 
         public OrderHandler(EmailCredential credential)
         {
             _credential = credential;
         }
 
-        public void Handle(Product product, ShippingCredentials shippingCredentials) //Change product to cart (wrap it)
+        /// <summary>
+        /// Handles customer's order, provides mail sending
+        /// </summary>
+        /// <param name="product">Customer's order</param>
+        /// <param name="shippingCredentials">Customer's contact information</param>
+        /// <returns>Status message</returns>
+        public string Handle(Product product, ShippingDetails shippingCredentials) //Change product to cart (wrap it)
         {
             StringBuilder mailToClientSubject = new StringBuilder();
-            mailToClientSubject.AppendFormat("Hello, {0}! Thanks for you order! (do-not-reply)", 
+            mailToClientSubject.AppendFormat("Hello, {0}! Thanks for you order! (do-not-reply)",
                 shippingCredentials.FirstName);
 
             StringBuilder mailToClientBody = new StringBuilder();
             mailToClientBody.AppendLine("You have ordered a product "
-                                + product.Name + " at ToolStore. <br/>")
+                                        + product.Name + " at ToolStore. <br/>")
                 .AppendLine("Order details: <br/>")
                 .AppendFormat("Product: {0} <br/>About it: {1} <br/>Price: {2:C} <br/>",
                     product.Name, product.Description, product.Price)
@@ -57,7 +70,7 @@ namespace ToolStore.Domain.Concrete
 
             try
             {
-                using (SmtpClient client = new SmtpClient(_credential.Host, _credential.Port)) //
+                using (SmtpClient client = new SmtpClient(_credential.Host, _credential.Port))
                 {
                     string password = _credential.Password;
                     client.EnableSsl = _credential.UseSsl;
@@ -73,8 +86,9 @@ namespace ToolStore.Domain.Concrete
             }
             catch (SmtpException exc)
             {
-                throw new Exception("Could not connect to smtp server");
+                return "Problems sending an email.\r\n" + exc.Message;
             }
+            return "Thanks for you order";
         }
     }
 }

@@ -2,9 +2,14 @@
 
 <style>
     .dng {
-        font-size: 15px;
         color: brown;
+        font-size: 15px;
     }
+    .field-validation-error {color: #f00;}
+    .field-validation-valid { display: none;}
+    .input-validation-error { border: 1px solid #f00; background-color: #fee; }
+    .validation-summary-errors { font-weight: bold; color: #f00;}
+    .validation-summary-valid { display: none;}
 </style>
 
 <div class="col-md-3"></div>
@@ -16,19 +21,21 @@
         <span class="dng">(* marked fields are required)</span>
     </div>
     <br/>
-    <div class="well">
+    <div class="well row">
+
         <h4>Your order is: @Model.Product.Name</h4>
-        <span>
-        @Model.Product.Description
-        <br />
-        <strong class="text-primary">Price: @Model.Product.Price.ToString("C")</strong>
-    </span>
+        <p>
+            <img src="/@Model.Product.PicturePath" alt="@Model.Product.Name" width="200" height="200" style="float: left; margin: 7px;"/>
+            <span>@Model.Product.Description</span>
+        </p>
+        <br/>
+        <strong class="text-primary" style="float: none">Price: @Model.Product.Price.ToString("C")</strong>
     </div>
 
-    @using (Html.BeginForm("Checkout", "Shipment"))
+    @using (Html.BeginForm())
     {
         @Html.HiddenFor(m => m.Product.Id)
-        <div class="text-danger">
+        <div>
             @Html.ValidationSummary()
         </div>
         <hr/>
@@ -37,19 +44,19 @@
             <h3>Ship to</h3>
             <div class="form-group">
                 <label><span class="dng">*</span>First name:</label>
-                @Html.TextBoxFor(m => m.ShippingCredentials.FirstName, new {@name = "fname", required = "required", maxlength = "30", @class = "form-control"})
+                @Html.TextBoxFor(m => m.ShippingCredentials.FirstName, new {@name = "fname", maxlength = "30", @class = "form-control"})
                 <label><span class="dng">*</span>Second name:</label>
-                @Html.TextBoxFor(m => m.ShippingCredentials.SecondName, new {@name = "sname", required = "required", maxlength = "30", @class = "form-control"})
+                @Html.TextBoxFor(m => m.ShippingCredentials.SecondName, new {@name = "sname", maxlength = "30", @class = "form-control"})
             </div>
 
             <h3>Contacts</h3>
             <div class="form-group">
                 <label><span class="dng">*</span>Address:</label>
-                @Html.TextBoxFor(m => m.ShippingCredentials.Address, new {@name = "address", required = "required", @class = "form-control"})
+                @Html.TextBoxFor(m => m.ShippingCredentials.Address, new {@name = "address", @class = "form-control"})
                 <label><span class="dng">*</span>Phone number:</label>
-                @Html.TextBoxFor(m => m.ShippingCredentials.Phone, new {@name = "phone", required = "required", @class = "form-control"})
+                @Html.TextBoxFor(m => m.ShippingCredentials.Phone, new {@name = "phone", @class = "form-control"})
                 <label><span class="dng">*</span>Email address:</label>
-                @Html.TextBoxFor(m => m.ShippingCredentials.Email, new {@name = "email", required = "required", type = "email", @class = "form-control"})
+                @Html.TextBoxFor(m => m.ShippingCredentials.Email, new {@name = "email", type = "email", @class = "form-control"})
             </div>
         </div>
 

@@ -1,0 +1,5 @@
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.DAL\obj\Debug\ToolStore.DAL.csprojResolveAssemblyReference.cache
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.DAL\bin\Debug\ToolStore.DAL.dll
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.DAL\bin\Debug\ToolStore.DAL.pdb
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.DAL\obj\Debug\ToolStore.DAL.dll
+C:\Users\Egor\Documents\Visual Studio 2013\Projects\BU_STUDY\Lesson 11\ToolStore\ToolStore.DAL\obj\Debug\ToolStore.DAL.pdb

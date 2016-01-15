@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ToolStore.Domain.Concrete
+﻿namespace ToolStore.Domain.Concrete
 {
+    /// <summary>
+    /// Email credentials to use with EmailSender
+    /// </summary>
     public class EmailCredential
     {
         public string Email { get; set; }

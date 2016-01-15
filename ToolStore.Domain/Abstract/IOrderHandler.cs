@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
+﻿#region
+
 using System.Threading.Tasks;
-using ToolStore.Domain.Concrete;
+using ToolStore.DAL.Entities;
 using ToolStore.Domain.Entities;
+
+#endregion
 
 namespace ToolStore.Domain.Abstract
 {
+    /// <summary>
+    /// Provides logic to handle order
+    /// </summary>
     public interface IOrderHandler
     {
-        void Handle(Product product, ShippingCredentials shippingCredentials);
+        string Handle(Product product, ShippingDetails shippingCredentials);
     }
 }

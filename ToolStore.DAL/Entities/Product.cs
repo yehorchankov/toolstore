@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ToolStore.Domain.Entities
+﻿namespace ToolStore.DAL.Entities
 {
+    /// <summary>
+    /// Incapsulates information about product
+    /// </summary>
     public class Product
     {
         public string Name { get; set; }
@@ -16,10 +13,7 @@ namespace ToolStore.Domain.Entities
 
         public string PicturePath
         {
-            get
-            {
-                return String.Format("Content/Photos/product_{0}.jpg", Id);
-            }
+            get { return string.Format("Content/Photos/product_{0}.jpg", Id); }
         }
     }
 }

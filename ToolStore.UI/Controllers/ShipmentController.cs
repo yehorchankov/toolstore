@@ -1,20 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Printing;
+﻿#region
+
+using System;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
+using ToolStore.DAL.Entities;
 using ToolStore.Domain.Abstract;
-using ToolStore.Domain.Concrete;
 using ToolStore.Domain.Entities;
 using ToolStore.UI.Models;
+
+#endregion
 
 namespace ToolStore.UI.Controllers
 {
     public class ShipmentController : Controller
     {
-        private IOrderHandler _orderHandler;
-        private IProductRepository _productRepository;
+        private readonly IOrderHandler _orderHandler;
+        private readonly IProductRepository _productRepository;
 
         public ShipmentController(IOrderHandler orderHandler, IProductRepository repository)
         {
@@ -23,28 +24,40 @@ namespace ToolStore.UI.Controllers
         }
 
         // GET: Shipment
-        public ViewResult Buy(int Id)
+        [HttpGet]
+        public ActionResult Buy(int? Id)
         {
-            ProductShipmentDetailsViewModel details = new ProductShipmentDetailsViewModel
+            if (Id == null || _productRepository.Products.All(p => p.Id != Id)) 
+                return PageNotFound("Item not found");
+
+            var details = new ProductShipmentDetailsViewModel
             {
                 Product = _productRepository.Products.FirstOrDefault(p => p.Id == Id),
-                ShippingCredentials = new ShippingCredentials()
+                ShippingCredentials = new ShippingDetails()
             };
+
             return View(details);
         }
 
         [HttpPost]
-        public ViewResult Checkout(Product product, ProductShipmentDetailsViewModel details)
+        public ActionResult Buy(Product product, ProductShipmentDetailsViewModel details)
         {
             details.Product = _productRepository.Products
                 .FirstOrDefault(p => p.Id == product.Id);
             if (!ModelState.IsValid)
-                return View("Buy", details);
+                return View(details);
+
+            string message = String.Empty;
             if (ModelState.IsValid)
             {
-                _orderHandler.Handle(details.Product, details.ShippingCredentials);
+                message = _orderHandler.Handle(details.Product, details.ShippingCredentials);
             }
-            return View("Success");
+            return View("Success", (object)message);
+        }
+
+        public HttpNotFoundResult PageNotFound(string message)
+        {
+            return HttpNotFound(message);
         }
     }
 }
